@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MySettings" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Eh-Z3-XeS">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="E9c-Lw-m4N"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="My Settings" id="KWk-j5-BuG"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hIS-tO-yVa">
+                                <rect key="frame" x="106" y="73" width="163" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LFE-86-EE3"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R0J-JQ-fLP">
+                                <rect key="frame" x="106" y="111" width="163" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="xIK-bi-jcB"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Year of Birth Below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3E-wj-DlC">
+                                <rect key="frame" x="83" y="175" width="209" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="L6E-et-alN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3R-IE-nHg">
+                                <rect key="frame" x="0.0" y="233" width="375" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="565982556.01380098">
+                                    <!--2018-12-08 17:22:36 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-1925038800">
+                                    <!--1940-01-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="631105200">
+                                    <!--2020-12-31 11:00:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyN-sq-y0U">
+                                <rect key="frame" x="170" y="403" width="35" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CPp-Vb-A0K"/>
+                                </constraints>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="btnSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rAn-20-Tmd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jyN-sq-y0U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="170" id="17U-nk-bvb"/>
+                            <constraint firstItem="k3R-IE-nHg" firstAttribute="centerX" secondItem="jyN-sq-y0U" secondAttribute="centerX" id="334-UP-RDy"/>
+                            <constraint firstItem="R0J-JQ-fLP" firstAttribute="top" secondItem="hIS-tO-yVa" secondAttribute="bottom" constant="8" symbolic="YES" id="81v-Ry-oYf"/>
+                            <constraint firstItem="k3R-IE-nHg" firstAttribute="top" secondItem="n3E-wj-DlC" secondAttribute="bottom" constant="37" id="C4l-8G-gYO"/>
+                            <constraint firstItem="jyN-sq-y0U" firstAttribute="top" secondItem="k3R-IE-nHg" secondAttribute="bottom" constant="8" symbolic="YES" id="JbP-1F-AnZ"/>
+                            <constraint firstItem="hIS-tO-yVa" firstAttribute="leading" secondItem="R0J-JQ-fLP" secondAttribute="leading" id="VzX-8k-mkx"/>
+                            <constraint firstItem="3Eh-Z3-XeS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Z8I-KN-Wjz"/>
+                            <constraint firstAttribute="trailing" secondItem="3Eh-Z3-XeS" secondAttribute="trailing" id="ash-R9-8bC"/>
+                            <constraint firstItem="3Eh-Z3-XeS" firstAttribute="trailing" secondItem="k3R-IE-nHg" secondAttribute="trailing" id="eik-67-siL"/>
+                            <constraint firstItem="R0J-JQ-fLP" firstAttribute="centerX" secondItem="n3E-wj-DlC" secondAttribute="centerX" id="gDc-7S-FdC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jyN-sq-y0U" secondAttribute="bottom" constant="234" id="gRJ-oj-a8C"/>
+                            <constraint firstItem="hIS-tO-yVa" firstAttribute="top" secondItem="3Eh-Z3-XeS" secondAttribute="bottom" constant="9" id="iYq-bn-eIT"/>
+                            <constraint firstItem="3Eh-Z3-XeS" firstAttribute="centerX" secondItem="hIS-tO-yVa" secondAttribute="centerX" id="lJH-Sy-qDy"/>
+                            <constraint firstItem="hIS-tO-yVa" firstAttribute="trailing" secondItem="R0J-JQ-fLP" secondAttribute="trailing" id="lUP-Cx-yX0"/>
+                            <constraint firstItem="n3E-wj-DlC" firstAttribute="top" secondItem="R0J-JQ-fLP" secondAttribute="bottom" constant="34" id="p70-Em-JR7"/>
+                            <constraint firstItem="3Eh-Z3-XeS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="x2f-hz-ydS"/>
+                            <constraint firstItem="hIS-tO-yVa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="106" id="zln-1N-hZP"/>
+                            <constraint firstItem="3Eh-Z3-XeS" firstAttribute="leading" secondItem="k3R-IE-nHg" secondAttribute="leading" id="zoL-Xr-AkZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="datepicker" destination="k3R-IE-nHg" id="Io6-eO-dj6"/>
+                        <outlet property="phone" destination="R0J-JQ-fLP" id="unn-PG-MUK"/>
+                        <outlet property="uaerName" destination="hIS-tO-yVa" id="PiU-RB-P55"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
